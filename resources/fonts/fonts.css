@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'CaslonCP';
+    src: url('CaslonCP.eot');
+    src: url('CaslonCP.eot?#iefix') format('embedded-opentype'),
+        url('CaslonCP.woff2') format('woff2'),
+        url('CaslonCP.woff') format('woff'),
+        url('CaslonCP.ttf') format('truetype'),
+        url('CaslonCP.svg#CaslonCP') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

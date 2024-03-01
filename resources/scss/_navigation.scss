@@ -1,0 +1,37 @@
+.header {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 30;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 33px 0;
+        padding-left: 10px;
+        height: 80px;
+    }
+
+    ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+
+        li {
+            min-width: 90px;
+            font-family: 'Inter', sans-serif;
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 15px;
+            letter-spacing: 0.1em;
+            text-align: center;
+
+            a {
+                text-decoration: none;
+                color: $body;
+            }
+        }
+    }
+}

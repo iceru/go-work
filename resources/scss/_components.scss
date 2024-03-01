@@ -1,0 +1,53 @@
+.btn,
+button {
+    outline: none;
+    border: none;
+    box-shadow: none;
+    background: none;
+    cursor: pointer;
+
+    &.light-black {
+        border: 1.5px solid;
+        border-image: linear-gradient(90deg, #243033 0%, #0D4759 100%) 20% auto;
+        color: $body;
+        font-family: 'Inter', sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 17px;
+        letter-spacing: 0.02em;
+        text-align: center;
+        min-width: 110px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 14px;
+    }
+
+    &.black {
+        background: linear-gradient(90deg, #243033 0%, #0D4759 100%);
+        color: white;
+        min-width: 200px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 14px;
+        border-radius: 14px;
+    }
+
+    &.btn-text {
+        color: $primary;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        gap: 7px;
+        font-size: 14px;
+
+        .icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}

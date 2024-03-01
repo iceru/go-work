@@ -1,4 +1,83 @@
+$body: rgba(29, 36, 38, 1);
+$primary: rgba(191, 140, 21, 1);
+$darkerPrimary: rgba(158, 118, 25, 1);
+$secondary: rgba(65, 78, 82, 1);
+$primaryLight: rgba(252, 244, 237, 1);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: $body;
+    font-weight: 400;
+}
+
 .container {
     max-width: 1140px;
-    margin: auto;
+    margin: 0 auto;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+h3 {
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 35px;
+}
+
+h4 {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 30px;
+}
+
+.subtitle-1 {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 19px;
+    letter-spacing: 0px;
+    text-align: left;
+}
+
+.subtitle-2 {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: 0px;
+    text-align: center;
+}
+
+.subtitle-3 {
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 18px;
+    letter-spacing: 0px;
+    text-align: center;
+}
+
+input,
+select {
+    border: 1px solid rgba(190, 201, 204, 1);
+    border-radius: 14px;
+    padding: 10px;
+    color: rgba(146, 162, 166, 1);
 }

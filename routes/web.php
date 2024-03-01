@@ -14,5 +14,16 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('index');
+    $plans = ['Plane One', 'Plan Two', 'Plan Three', 'Plan Four', 'Plan Five'];
+    $locations = array (
+      (object)[
+        'title' => 'Sampoerna',
+        'value' => 'GoWork Strategic Sampoerna'
+      ],
+      (object)[
+        'title' => 'GoWork Pondok Indah',
+        'value' => 'GoWork Pondok Indah'
+      ],
+    );
+    return view('index', compact('plans', 'locations'));
 });
