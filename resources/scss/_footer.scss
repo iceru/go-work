@@ -102,4 +102,45 @@ footer {
             color: rgba(108, 124, 128, 1);
         }
     }
+
+    @include lt-sm {
+        .upper {
+            flex-direction: column;
+            align-items: start;
+
+            img {
+                margin-bottom: 20px;
+            }
+
+            input {
+                width: 100%;
+            }
+        }
+    }
+
+    @include lt-md {
+        .container {
+            padding: 32px 16px 24px;
+        }
+
+        .bottom {
+            flex-direction: column;
+            gap: 30px;
+
+            .contact {
+                display: flex;
+                justify-content: space-between;
+                align-items: start;
+
+                .wa {
+                    margin-bottom: 0;
+                }
+            }
+
+            .download {
+                margin-bottom: 30px;
+            }
+        }
+    }
+
 }

@@ -16,19 +16,19 @@
                 <div>
                     <img src="{{ asset('images/GoWork.png') }}" alt="GoWork">
                 </div>
-                <div>
-                    <input type="text" placeholder="Enter your email address for updates">
-                </div>
+                <input type="text" placeholder="Enter your email address for updates">
             </div>
             <div class="bottom">
                 <div class="contact">
-                    <div class="phone">
-                        <img src="{{ asset('images/call-answer.png') }}" alt="Phone">
-                        +62 21 3970 7888
-                    </div>
-                    <div class="phone wa">
-                        <img src="{{ asset('images/whatsapp.png') }}" alt="Whatsapp">
-                        +62 21 3970 7888
+                    <div class="phoneWrapper">
+                        <div class="phone">
+                            <img src="{{ asset('images/call-answer.png') }}" alt="Phone">
+                            +62 21 3970 7888
+                        </div>
+                        <div class="phone wa">
+                            <img src="{{ asset('images/whatsapp.png') }}" alt="Whatsapp">
+                            +62 21 3970 7888
+                        </div>
                     </div>
                     <div class="social">
                         <img src="{{ asset('images/instagram.png') }}" alt="Instagram">

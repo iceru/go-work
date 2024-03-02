@@ -20,15 +20,6 @@ header {
         z-index: 10;
         margin-top: 100px;
 
-        h1 {
-            font-family: 'CaslonCP', sans-serif;
-            font-size: 48px;
-            font-weight: 400;
-            line-height: 48px;
-            margin: 0;
-            margin-bottom: 10px;
-        }
-
         p {
             line-height: 27.2px;
             margin-bottom: 40px;
@@ -76,12 +67,19 @@ header {
         position: absolute;
         right: 0;
         bottom: 50px;
-        height: calc(100% - 30px);
+        border-radius: 10px 0px 0px 0px;
+        height: calc(100% - 50px);
+
+        .imageWrapper {
+            border-radius: 10px 0px 0px 0px;
+        }
 
         img {
             width: 100%;
             object-fit: cover;
             height: 100%;
+            border-radius: 10px 0px 0px 0px;
+            padding: 0 1px;
         }
     }
 
@@ -91,11 +89,47 @@ header {
         position: relative;
         z-index: 10;
     }
+
+
+
+    @include lt-md {
+        flex-direction: column;
+
+        .headerImage {
+            position: static;
+            order: 1;
+            width: 100%;
+            padding-left: 16px;
+        }
+
+        .container {
+            order: 2;
+            width: 100%;
+
+            .headerContent {
+                margin-top: 0;
+                padding: 28px 0 20px;
+
+                .location {
+                    width: 90%;
+                }
+            }
+
+            .headerArrows {
+                display: none;
+            }
+        }
+    }
+
 }
 
 main {
     section {
         margin: 100px 0;
+
+        @include lt-md {
+            margin: 50px 0;
+        }
     }
 }
 
@@ -114,6 +148,15 @@ main {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
         gap: 20px;
+
+        @include lt-sm {
+            grid-template-columns: repeat(1, 1fr);
+            gap: 16px
+        }
+
+        @include lt-lg {
+            grid-template-columns: repeat(3, 1fr);
+        }
 
         .planItem {
             box-shadow: 0.5px 2px 5px 0px rgba(105, 73, 49, 0.1);
@@ -157,6 +200,12 @@ main {
                         font-size: 10px;
                         text-transform: uppercase;
                     }
+
+                    @include lt-md {
+                        display: grid;
+                        grid-template-columns: repeat(2, 1fr);
+                        column-gap: 8px;
+                    }
                 }
             }
 
@@ -184,6 +233,12 @@ main {
     line-height: 32px;
     letter-spacing: 0em;
     text-align: left;
+
+
+    @include lt-md {
+        font-size: 18px;
+        line-height: 28.8px;
+    }
 }
 
 .included {
@@ -195,6 +250,11 @@ main {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 60px;
+
+        @include lt-md {
+            grid-template-columns: repeat(1, 1fr);
+            gap: 30px;
+        }
 
         .title {
             margin-bottom: 10px;
@@ -214,4 +274,12 @@ main {
     padding: 25px 20px;
     display: flex;
     justify-content: space-between;
+
+    @include lt-sm {
+        flex-direction: column;
+
+        h4 {
+            margin-bottom: 20px;
+        }
+    }
 }

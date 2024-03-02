@@ -1,3 +1,17 @@
+@mixin menuItem {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 15px;
+    letter-spacing: 0.1em;
+    text-align: center;
+
+    a {
+        text-decoration: none;
+        color: $body;
+    }
+}
+
 .header {
     position: sticky;
     top: 0;
@@ -11,27 +25,83 @@
         padding: 33px 0;
         padding-left: 10px;
         height: 80px;
+
     }
 
-    ul {
+    .leftSide {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        .menu {
+            display: none;
+        }
+    }
+
+
+    .rightSide {
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 20px;
 
-        li {
-            min-width: 90px;
-            font-family: 'Inter', sans-serif;
-            font-size: 12px;
-            font-weight: 500;
-            line-height: 15px;
-            letter-spacing: 0.1em;
-            text-align: center;
+        ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
 
-            a {
-                text-decoration: none;
-                color: $body;
+            li {
+                min-width: 90px;
+                @include menuItem();
             }
         }
     }
+
+    .mobile {
+        position: fixed;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        max-height: 0;
+        opacity: 0;
+        transition: all .3s ease;
+        visibility: hidden;
+
+        ul {
+            li {
+                @include menuItem();
+                text-align: left;
+                padding: 1rem;
+            }
+        }
+
+        &.active {
+            max-height: fit-content;
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    @include lt-md {
+        .container {
+            padding: 0 16px;
+        }
+
+        .logo img {
+            height: 13px;
+        }
+
+        .leftSide .menu {
+            display: flex;
+        }
+
+        .rightSide ul {
+            display: none;
+        }
+    }
+}
+
+.slick-list {
+    height: 100%;
 }

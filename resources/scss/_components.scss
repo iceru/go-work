@@ -22,6 +22,15 @@ button {
         justify-content: center;
         align-items: center;
         border-radius: 14px;
+        transition: background .3s ease;
+
+        &:hover {
+            background: rgba(235, 241, 242, 1);
+        }
+
+        &:disabled {
+            opacity: 0.3;
+        }
     }
 
     &.black {
@@ -34,15 +43,49 @@ button {
         align-items: center;
         font-size: 14px;
         border-radius: 14px;
+        position: relative;
+
+        span {
+            position: relative;
+            z-index: 10;
+        }
+
+        &::before {
+            position: absolute;
+            content: "";
+            inset: 0;
+            background: linear-gradient(90deg, #0D4759 0%, #243033 100%);
+            z-index: 1;
+            opacity: 0;
+            transition: opacity 0.25s linear;
+            border-radius: 14px;
+        }
+
+        &:hover::before {
+            opacity: 1;
+        }
+
+        &:disabled {
+            opacity: 0.3;
+        }
     }
 
     &.btn-text {
-        color: $primary;
+        color: $darkerPrimary;
         display: flex;
         align-items: center;
         justify-content: end;
         gap: 7px;
         font-size: 14px;
+        transition: background .3s ease;
+
+        &:hover {
+            color: $primary;
+        }
+
+        &:disabled {
+            opacity: 0.3;
+        }
 
         .icon {
             display: flex;

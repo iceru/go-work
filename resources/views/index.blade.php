@@ -27,20 +27,27 @@
                 </div>
 
                 <button class="btn black">
-                    Find Space
+                    <span>Find Space</span>
                 </button>
             </div>
             <div class="headerArrows">
-                <button>
-                    <img src="{{ asset('images/arrow-left.png') }}" alt="">
-                </button>
-                <button>
-                    <img src="{{ asset('images/arrow-right.png') }}" alt="">
-                </button>
+
+
             </div>
         </div>
         <div class="headerImage">
-            <img src="{{ asset('images/header-1.png') }}" alt="">
+            <div class="imageWrapper">
+                <img srcset="{{ asset('images/header-1-4025w.png') }} 4025w, 
+                    {{ asset('images/header-1.png') }} 1900w, 
+                    {{ asset('images/header-1-480w.png') }} 480w"
+                    src="{{ asset('images/header-1.png') }}" alt="">
+            </div>
+            <div class="imageWrapper">
+                <img srcset="{{ asset('images/header-2-4025w.png') }} 4025w, 
+                    {{ asset('images/header-2.png') }} 1900w, 
+                    {{ asset('images/header-2-480w.png') }} 480w"
+                    src="{{ asset('images/header-2.png') }}" alt="">
+            </div>
         </div>
     </header>
     <main class="container">
@@ -144,4 +151,21 @@
             </button>
         </section>
     </main>
+
+    @section('js')
+        <script>
+            $(document).ready(function() {
+                $('.headerImage').slick({
+                    dots: false,
+                    prevArrow: `<button type="button">
+                    <img src="{{ asset('images/arrow-left.png') }}" alt="">
+                    </button>`,
+                    nextArrow: `<button type="button">
+                    <img src="{{ asset('images/arrow-right.png') }}" alt="">
+                    </button>`,
+                    appendArrows: $('.headerArrows')
+                })
+            });
+        </script>
+    @endsection
 </x-app-layout>

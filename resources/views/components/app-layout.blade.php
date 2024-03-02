@@ -14,6 +14,15 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
         rel="stylesheet">
 
+    {{-- Slider CSS --}}
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+
+    {{-- jQuery --}}
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    {{-- Slider JS --}}
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
     {{-- Initialize CSS and JS From Vite --}}
     @vite(['resources/scss/app.scss', 'resources/js/app.js'])
 </head>
@@ -29,5 +38,7 @@
     @include('components.footer')
 
 </body>
+
+@yield('js')
 
 </html>
