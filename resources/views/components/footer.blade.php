@@ -16,7 +16,7 @@
                 <div>
                     <img src="{{ asset('images/GoWork.png') }}" alt="GoWork">
                 </div>
-                <input type="text" placeholder="Enter your email address for updates">
+                <input type="email" placeholder="Enter your email address for updates">
             </div>
             <div class="bottom">
                 <div class="contact">
@@ -31,9 +31,15 @@
                         </div>
                     </div>
                     <div class="social">
-                        <img src="{{ asset('images/instagram.png') }}" alt="Instagram">
-                        <img src="{{ asset('images/in.png') }}" alt="LinkedIn">
-                        <img src="{{ asset('images/Youtube.png') }}" alt="Youtube">
+                        <a href="https://www.instagram.com/lets.gowork/?hl=en">
+                            <img src="{{ asset('images/instagram.png') }}" alt="Instagram">
+                        </a>
+                        <a href="https://www.linkedin.com/company/letsgowork?originalSubdomain=id">
+                            <img src="{{ asset('images/in.png') }}" alt="LinkedIn">
+                        </a>
+                        <a href="https://www.youtube.com/@LetsGoWork">
+                            <img src="{{ asset('images/Youtube.png') }}" alt="Youtube">
+                        </a>
                     </div>
                 </div>
                 <div class="menu">

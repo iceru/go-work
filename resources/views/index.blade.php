@@ -12,10 +12,10 @@
 
                 <div class="location">
                     <div class="ico">
-                        <img src="{{ asset('images/location.png') }}" alt="">
+                        <img src="{{ asset('images/location.png') }}" alt="Location">
                     </div>
                     <div class="ico arrow">
-                        <img src="{{ asset('images/collapse.png') }}" alt="">
+                        <img src="{{ asset('images/collapse.png') }}" alt="Chevron Down">
                     </div>
                     <select name="location" id="location">
                         <option value="" class="defaultOpt">
@@ -37,16 +37,17 @@
         </div>
         <div class="headerImage">
             <div class="imageWrapper">
+                {{-- srcset for accommodate retina, desktop and mobile display --}}
                 <img srcset="{{ asset('images/header-1-4025w.png') }} 4025w, 
                     {{ asset('images/header-1.png') }} 1900w, 
                     {{ asset('images/header-1-480w.png') }} 480w"
-                    src="{{ asset('images/header-1.png') }}" alt="">
+                    src="{{ asset('images/header-1.png') }}" alt="Header 1">
             </div>
             <div class="imageWrapper">
                 <img srcset="{{ asset('images/header-2-4025w.png') }} 4025w, 
                     {{ asset('images/header-2.png') }} 1900w, 
                     {{ asset('images/header-2-480w.png') }} 480w"
-                    src="{{ asset('images/header-2.png') }}" alt="">
+                    src="{{ asset('images/header-2.png') }}" alt="Header 2">
             </div>
         </div>
     </header>
@@ -60,32 +61,32 @@
                     <div class="planItem">
                         <div class="planDesc">
                             <div class="planImage">
-                                <img src="{{ asset('images/plan.png') }}" alt="">
+                                <img src="{{ asset('images/plan.png') }}" alt="Plan">
                             </div>
                             <h5>{{ $plan }}</h5>
                             <p class="planText">Introduction Lorem ipsum dolor sit amet, consectetur.</p>
                             <ul>
                                 <li>
                                     <div>
-                                        <img src="{{ asset('images/benefit.png') }}" alt="">
+                                        <img src="{{ asset('images/benefit.png') }}" alt="Benefit">
                                     </div>
                                     <p>Benefit</p>
                                 </li>
                                 <li>
                                     <div>
-                                        <img src="{{ asset('images/benefit.png') }}" alt="">
+                                        <img src="{{ asset('images/benefit.png') }}" alt="Benefit">
                                     </div>
                                     <p>Benefit</p>
                                 </li>
                                 <li>
                                     <div>
-                                        <img src="{{ asset('images/benefit.png') }}" alt="">
+                                        <img src="{{ asset('images/benefit.png') }}" alt="Benefit">
                                     </div>
                                     <p>Benefit</p>
                                 </li>
                                 <li>
                                     <div>
-                                        <img src="{{ asset('images/benefit.png') }}" alt="">
+                                        <img src="{{ asset('images/benefit.png') }}" alt="Benefit">
                                     </div>
                                     <p>Benefit</p>
                                 </li>
@@ -146,7 +147,7 @@
             <button class="btn btn-text">
                 Call to Action
                 <div class="icon">
-                    <img src="{{ asset('images/chevron-right.png') }}" alt="">
+                    <img src="{{ asset('images/chevron-right.png') }}" alt="Chevron Right">
                 </div>
             </button>
         </section>
@@ -154,14 +155,15 @@
 
     @section('js')
         <script>
+            // Header Slider using Slick Slider
             $(document).ready(function() {
                 $('.headerImage').slick({
                     dots: false,
                     prevArrow: `<button type="button">
-                    <img src="{{ asset('images/arrow-left.png') }}" alt="">
+                    <img src="{{ asset('images/arrow-left.png') }}" alt="Arrow Left">
                     </button>`,
                     nextArrow: `<button type="button">
-                    <img src="{{ asset('images/arrow-right.png') }}" alt="">
+                    <img src="{{ asset('images/arrow-right.png') }}" alt="Arrow Right">
                     </button>`,
                     appendArrows: $('.headerArrows')
                 })

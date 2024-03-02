@@ -2,10 +2,10 @@
     <div class="container">
         <div class="leftSide">
             <button type="button" class="hamburger">
-                <img src="{{ asset('images/menu.png') }}" alt="">
+                <img src="{{ asset('images/menu.png') }}" alt="Hamburger">
             </button>
             <a href="#" class="logo">
-                <img src="{{ asset('images/GoWork.png') }}" alt="">
+                <img src="{{ asset('images/GoWork.png') }}" alt="GoWork">
             </a>
         </div>
         <div class="rightSide">
