@@ -1,7 +1,7 @@
 <nav class="header">
     <div class="container">
         <div class="leftSide">
-            <button type="button" class="menu">
+            <button type="button" class="hamburger">
                 <img src="{{ asset('images/menu.png') }}" alt="">
             </button>
             <a href="#" class="logo">
@@ -54,7 +54,7 @@
 
 <script>
     $(document).ready(function() {
-        $('.menu').click(function(e) {
+        $('.hamburger').click(function(e) {
             $('.mobile').toggleClass('active');
         });
     });

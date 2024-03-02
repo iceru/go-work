@@ -149,13 +149,13 @@ main {
         grid-template-columns: repeat(5, 1fr);
         gap: 20px;
 
+        @include lt-lg {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
         @include lt-sm {
             grid-template-columns: repeat(1, 1fr);
             gap: 16px
-        }
-
-        @include lt-lg {
-            grid-template-columns: repeat(3, 1fr);
         }
 
         .planItem {
