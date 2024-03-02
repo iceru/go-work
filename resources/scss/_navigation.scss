@@ -36,6 +36,10 @@
         .menu {
             display: none;
         }
+
+        .logo img {
+            height: 13px;
+        }
     }
 
 
@@ -43,6 +47,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        gap: 20px;
 
         ul {
             display: flex;
@@ -86,10 +91,6 @@
     @include lt-md {
         .container {
             padding: 0 16px;
-        }
-
-        .logo img {
-            height: 13px;
         }
 
         .leftSide .menu {
